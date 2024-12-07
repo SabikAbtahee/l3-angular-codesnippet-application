@@ -1,0 +1,10 @@
+<mat-nav-list>
+	@for (link of list; track link) {
+		<mat-list-item
+			[routerLink]="link.path"
+			[activated]="isCurrentRoute(link) ?? false | async"
+		>
+			<a matListItemTitle>{{ link.menuTitle }}</a>
+		</mat-list-item>
+	}
+</mat-nav-list>
