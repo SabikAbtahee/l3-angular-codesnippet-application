@@ -3,8 +3,8 @@
 @use "typography";
 @use "theme";
 
-@import "./animations.scss";
-@import "./material.scss";
+@use "./animations.scss";
+@use "./material.scss";
 @include mat.elevation-classes();
 @include mat.app-background();
 
