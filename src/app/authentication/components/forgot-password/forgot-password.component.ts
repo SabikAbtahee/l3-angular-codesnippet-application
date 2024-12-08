@@ -5,9 +5,10 @@ import { AuthenticationService } from "../../services/authentication.service";
 import { extractFormControls } from "@core";
 
 @Component({
-	selector: "app-forgot-password",
-	templateUrl: "./forgot-password.component.html",
-	styleUrl: "./forgot-password.component.scss"
+    selector: "app-forgot-password",
+    templateUrl: "./forgot-password.component.html",
+    styleUrl: "./forgot-password.component.scss",
+    standalone: false
 })
 export class ForgotPasswordComponent {
 	title = environment.portalName;

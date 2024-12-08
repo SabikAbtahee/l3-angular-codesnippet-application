@@ -11,11 +11,10 @@ import { MaterialModule } from "@material";
 import { AppSharedModule } from "@shared";
 
 @Component({
-	selector: "profile-menu",
-	standalone: true,
-	imports: [CommonModule, AppSharedModule, MaterialModule, AppCoreModule],
-	templateUrl: "./profile-menu.component.html",
-	styleUrl: "./profile-menu.component.scss"
+    selector: "profile-menu",
+    imports: [CommonModule, AppSharedModule, MaterialModule, AppCoreModule],
+    templateUrl: "./profile-menu.component.html",
+    styleUrl: "./profile-menu.component.scss"
 })
 export class ProfileMenuComponent {
 	loggedInUser: Signal<ILoggedInUser>;

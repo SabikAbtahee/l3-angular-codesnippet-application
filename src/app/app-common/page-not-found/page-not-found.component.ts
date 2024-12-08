@@ -6,11 +6,10 @@ import { RoutePath } from "@core";
 import { RouteHelperService } from "src/app/app-core/services/route-helper/route-helper.service";
 
 @Component({
-	selector: "app-page-not-found",
-	standalone: true,
-	imports: [CommonModule, RouterModule, MaterialModule],
-	templateUrl: "./page-not-found.component.html",
-	styleUrls: ["./page-not-found.component.scss"]
+    selector: "app-page-not-found",
+    imports: [CommonModule, RouterModule, MaterialModule],
+    templateUrl: "./page-not-found.component.html",
+    styleUrls: ["./page-not-found.component.scss"]
 })
 export class PageNotFoundComponent {
 	/**

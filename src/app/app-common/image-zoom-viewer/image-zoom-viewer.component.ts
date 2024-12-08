@@ -9,12 +9,11 @@ import {
 import { NgxImageZoomModule } from "ngx-image-zoom";
 
 @Component({
-	selector: "image-zoom-viewer",
-	standalone: true,
-	imports: [CommonModule, NgxImageZoomModule],
-	templateUrl: "./image-zoom-viewer.component.html",
-	styleUrl: "./image-zoom-viewer.component.scss",
-	encapsulation: ViewEncapsulation.None
+    selector: "image-zoom-viewer",
+    imports: [CommonModule, NgxImageZoomModule],
+    templateUrl: "./image-zoom-viewer.component.html",
+    styleUrl: "./image-zoom-viewer.component.scss",
+    encapsulation: ViewEncapsulation.None
 })
 export class ImageZoomViewerComponent {
 	@Input() imageSrc: string;

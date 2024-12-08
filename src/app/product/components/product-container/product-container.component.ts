@@ -7,9 +7,10 @@ import { MatDialog } from "@angular/material/dialog";
 import { ProductUpsertComponent } from "../product-upsert/product-upsert.component";
 
 @Component({
-	selector: "product-container",
-	templateUrl: "./product-container.component.html",
-	styleUrl: "./product-container.component.scss"
+    selector: "product-container",
+    templateUrl: "./product-container.component.html",
+    styleUrl: "./product-container.component.scss",
+    standalone: false
 })
 export class ProductContainerComponent extends UnsubscribeAllSubjectComponent {
 	searchControl = new FormControl("");

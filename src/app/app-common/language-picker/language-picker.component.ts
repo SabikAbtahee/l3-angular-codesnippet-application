@@ -5,11 +5,10 @@ import { AppSharedModule } from "../../app-shared/app-shared.module";
 import { environment } from "@environment";
 
 @Component({
-	selector: "app-language-picker",
-	standalone: true,
-	templateUrl: "./language-picker.component.html",
-	styleUrls: ["./language-picker.component.scss"],
-	imports: [CommonModule, MaterialModule, AppSharedModule]
+    selector: "app-language-picker",
+    templateUrl: "./language-picker.component.html",
+    styleUrls: ["./language-picker.component.scss"],
+    imports: [CommonModule, MaterialModule, AppSharedModule]
 })
 export class LanguagePickerComponent {
 	menuItems!: LanguageMenu[];

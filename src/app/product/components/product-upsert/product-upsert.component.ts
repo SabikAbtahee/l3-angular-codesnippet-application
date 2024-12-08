@@ -11,9 +11,10 @@ import {
 } from "@core";
 
 @Component({
-	selector: "product-upsert",
-	templateUrl: "./product-upsert.component.html",
-	styleUrl: "./product-upsert.component.scss"
+    selector: "product-upsert",
+    templateUrl: "./product-upsert.component.html",
+    styleUrl: "./product-upsert.component.scss",
+    standalone: false
 })
 export class ProductUpsertComponent extends UnsubscribeAllSubjectComponent {
 	productUpsertForm: FormGroup;

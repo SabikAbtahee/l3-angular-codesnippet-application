@@ -6,11 +6,10 @@ import { UnsubscribeAllSubjectComponent } from "../unsubscribe-all-subject/unsub
 import { SideDrawerService } from "@common";
 
 @Component({
-	selector: "app-side-drawer",
-	standalone: true,
-	imports: [CommonModule],
-	templateUrl: "./side-drawer.component.html",
-	styleUrls: ["./side-drawer.component.scss"]
+    selector: "app-side-drawer",
+    imports: [CommonModule],
+    templateUrl: "./side-drawer.component.html",
+    styleUrls: ["./side-drawer.component.scss"]
 })
 export class SideDrawerComponent extends UnsubscribeAllSubjectComponent {
 	@Input() position: DrawerPosition = "end";

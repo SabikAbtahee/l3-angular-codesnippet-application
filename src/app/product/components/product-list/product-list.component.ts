@@ -8,9 +8,10 @@ import { Product } from "../../models/Product";
 import { ProductService } from "../../services/product.service";
 
 @Component({
-	selector: "product-list",
-	templateUrl: "./product-list.component.html",
-	styleUrl: "./product-list.component.scss"
+    selector: "product-list",
+    templateUrl: "./product-list.component.html",
+    styleUrl: "./product-list.component.scss",
+    standalone: false
 })
 export class ProductListComponent extends UnsubscribeAllSubjectComponent {
 	products: Product[];

@@ -12,9 +12,10 @@ import { ISignInDto } from "../../interfaces/ISignIn";
 import { finalize, first } from "rxjs";
 
 @Component({
-	selector: "app-sign-in",
-	templateUrl: "./sign-in.component.html",
-	styleUrl: "./sign-in.component.scss"
+    selector: "app-sign-in",
+    templateUrl: "./sign-in.component.html",
+    styleUrl: "./sign-in.component.scss",
+    standalone: false
 })
 export class SignInComponent {
 	title = environment.portalName;

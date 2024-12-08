@@ -3,11 +3,10 @@ import { CommonModule } from "@angular/common";
 import { Subject } from "rxjs";
 
 @Component({
-	selector: "unsubscribe-all-subject",
-	standalone: true,
-	imports: [CommonModule],
-	templateUrl: "./unsubscribe-all-subject.component.html",
-	styleUrl: "./unsubscribe-all-subject.component.scss"
+    selector: "unsubscribe-all-subject",
+    imports: [CommonModule],
+    templateUrl: "./unsubscribe-all-subject.component.html",
+    styleUrl: "./unsubscribe-all-subject.component.scss"
 })
 export class UnsubscribeAllSubjectComponent implements OnDestroy {
 	public _unsubscribleAll: Subject<boolean>;

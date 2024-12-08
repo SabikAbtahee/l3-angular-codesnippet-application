@@ -5,11 +5,10 @@ import { MaterialModule } from "@material";
 import { AppSharedModule } from "@shared";
 
 @Component({
-	selector: "file-upload",
-	standalone: true,
-	imports: [CommonModule, AppSharedModule, MaterialModule],
-	templateUrl: "./file-upload.component.html",
-	styleUrl: "./file-upload.component.scss"
+    selector: "file-upload",
+    imports: [CommonModule, AppSharedModule, MaterialModule],
+    templateUrl: "./file-upload.component.html",
+    styleUrl: "./file-upload.component.scss"
 })
 export class FileUploadComponent {
 	@Input() label: string = "Drag and drop files here or click to upload";

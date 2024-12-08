@@ -12,11 +12,10 @@ import { MaterialModule } from "@material";
 import { AppSharedModule } from "@shared";
 
 @Component({
-	selector: "toast-message",
-	standalone: true,
-	imports: [CommonModule, MaterialModule, AppSharedModule],
-	templateUrl: "./toast-message.component.html",
-	styleUrl: "./toast-message.component.scss"
+    selector: "toast-message",
+    imports: [CommonModule, MaterialModule, AppSharedModule],
+    templateUrl: "./toast-message.component.html",
+    styleUrl: "./toast-message.component.scss"
 })
 export class ToastMessageComponent implements OnInit {
 	currentTemplate!: TemplateRef<any>;

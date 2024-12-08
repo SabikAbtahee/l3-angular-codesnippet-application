@@ -14,17 +14,16 @@ import { passwordRegexPattern } from "@core";
 import { FormValidationErrorComponent } from "../form-validation-error/form-validation-error.component";
 
 @Component({
-	selector: "password-field",
-	standalone: true,
-	imports: [
-		CommonModule,
-		AppCoreModule,
-		MaterialModule,
-		AppSharedModule,
-		FormValidationErrorComponent
-	],
-	templateUrl: "./password-field.component.html",
-	styleUrl: "./password-field.component.scss"
+    selector: "password-field",
+    imports: [
+        CommonModule,
+        AppCoreModule,
+        MaterialModule,
+        AppSharedModule,
+        FormValidationErrorComponent
+    ],
+    templateUrl: "./password-field.component.html",
+    styleUrl: "./password-field.component.scss"
 })
 export class PasswordFieldComponent {
 	_passwordControl: FormControl;

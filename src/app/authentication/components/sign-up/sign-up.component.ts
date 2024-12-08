@@ -13,9 +13,10 @@ import { delay, finalize, first } from "rxjs";
 import { ToastMessageService } from "@common";
 
 @Component({
-	selector: "app-sign-up",
-	templateUrl: "./sign-up.component.html",
-	styleUrl: "./sign-up.component.scss"
+    selector: "app-sign-up",
+    templateUrl: "./sign-up.component.html",
+    styleUrl: "./sign-up.component.scss",
+    standalone: false
 })
 export class SignUpComponent implements OnInit {
 	title = environment.portalName;
