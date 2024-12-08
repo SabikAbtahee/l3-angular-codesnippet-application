@@ -1,0 +1,17 @@
+<div class="shopping-cart-icon">
+	<button
+		(click)="toggleShoppingCartList()"
+		color="warn"
+		mat-flat-button
+		class="icon-button"
+	>
+		<app-icon id="shopping-cart-IconId" [iconName]="'shopping_bag'" [iconClass]="'text-[24px]'"></app-icon>
+	</button>
+    <div>1 Item</div>
+    <div>$200</div>
+
+</div>
+
+<app-side-drawer #drawer [opened]="false" [position]="'end'">
+	<shopping-cart-list></shopping-cart-list>
+</app-side-drawer>

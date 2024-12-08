@@ -1,0 +1,93 @@
+<div class="h-full flex flex-col justify-center items-center">
+	<div>
+		<div class="mb-4 text-center">
+			<span class="text-4xl">{{ title }}</span>
+		</div>
+		<div class="shadow rounded-2xl border p-8">
+			<form [formGroup]="signUpForm">
+				<div class="flex flex-col gap-4">
+					<div class="flex flex-row gap-4">
+						<div class="flex flex-col gap-2 w-60">
+							<mat-form-field>
+								<mat-label>Full name</mat-label>
+								<input matInput formControlName="FullName" />
+								<mat-error>
+									<form-validation-error
+										[name]="'FullName'"
+										[control]="controls['FullName']"
+									></form-validation-error>
+								</mat-error>
+							</mat-form-field>
+						</div>
+						<div class="flex flex-col gap-2 w-60">
+							<mat-form-field>
+								<mat-label>Email address</mat-label>
+								<input matInput formControlName="Email" />
+								<mat-error>
+									<form-validation-error
+										[name]="'Email'"
+										[control]="controls['Email']"
+									></form-validation-error>
+								</mat-error>
+							</mat-form-field>
+						</div>
+					</div>
+					<div class="flex flex-row gap-4">
+						<div class="flex flex-col gap-2 w-60">
+							<mat-form-field>
+								<mat-label>PhoneNumber</mat-label>
+								<input matInput formControlName="PhoneNumber" />
+								<mat-error>
+									<form-validation-error
+										[name]="'PhoneNumber'"
+										[control]="controls['PhoneNumber']"
+									></form-validation-error>
+								</mat-error>
+							</mat-form-field>
+						</div>
+						<div class="w-60">
+							<password-field
+								[passwordControl]="controls['Password']"
+							></password-field>
+						</div>
+					</div>
+					<div class="flex flex-col gap-2">
+						<mat-form-field>
+							<mat-label>Address</mat-label>
+							<input matInput formControlName="Address" />
+							<mat-error>
+								<form-validation-error
+									[name]="'Address'"
+									[control]="controls['Address']"
+								></form-validation-error>
+							</mat-error>
+						</mat-form-field>
+					</div>
+				</div>
+				<div class="mt-8">
+					<button
+						[ngClass]="{ skeleton: isLoading }"
+						[disabled]="isLoading"
+						(click)="signup()"
+						mat-raised-button
+						class="w-full"
+						color="primary"
+					>
+						Create your free account
+					</button>
+				</div>
+			</form>
+		</div>
+
+		<div class="mt-6">
+			<span
+				>Already have an account?
+				<span
+					(click)="redirectToSignIn()"
+					class="cursor-pointer hover:underline primary"
+					>Sign In</span
+				></span
+			>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,113 @@
+<div class="pt-4 flex flex-col justify-center">
+	<div>
+		<div class="flex flex-row items-center justify-between mb-3 mx-4">
+			<div>
+				<span class="text-3xl">Add/Update Product</span>
+			</div>
+			<div>
+				<app-icon-button
+					[iconClass]="'text-[24px] warn'"
+					[iconName]="'close'"
+					(buttonClicked)="closeDialog()"
+				></app-icon-button>
+			</div>
+		</div>
+		<mat-divider></mat-divider>
+		<div>
+			<form [formGroup]="productUpsertForm">
+				<div mat-dialog-content class="flex flex-col">
+					<div class="flex flex-col gap-4">
+						<div>
+							<file-upload [label]="'Upload Product Images'" />
+						</div>
+						<div class="flex flex-col">
+							<mat-form-field>
+								<mat-label>Product Name</mat-label>
+								<input matInput formControlName="Name" />
+								<mat-error>
+									<form-validation-error
+										[name]="'Name'"
+										[control]="controls['Name']"
+									></form-validation-error>
+								</mat-error>
+							</mat-form-field>
+						</div>
+						<div class="flex flex-row gap-4 justify-between">
+							<mat-form-field class="flex grow">
+								<mat-label>Minimum Purchase Quantity</mat-label>
+								<input matInput formControlName="PurchaseUnitQuantity" />
+								<mat-error>
+									<form-validation-error
+										[name]="'PurchaseUnitQuantity'"
+										[control]="controls['PurchaseUnitQuantity']"
+									></form-validation-error>
+								</mat-error>
+							</mat-form-field>
+							<mat-form-field class="flex grow">
+								<mat-label>Unit</mat-label>
+								<mat-select formControlName="PurchaseUnitValue">
+									<mat-option
+										*ngFor="let unitType of unitTypes"
+										[value]="unitType.value"
+									>
+										{{ unitType.name }}
+									</mat-option>
+								</mat-select>
+								<mat-error>
+									<form-validation-error
+										[name]="'PurchaseUnitValue'"
+										[control]="controls['PurchaseUnitValue']"
+									></form-validation-error>
+								</mat-error>
+							</mat-form-field>
+						</div>
+						<div class="flex flex-row gap-4 justify-between">
+							<mat-form-field class="flex grow">
+								<mat-label>Batch Completion Limit</mat-label>
+								<input matInput formControlName="OrderCompletionLimit" />
+								<mat-error>
+									<form-validation-error
+										[name]="'OrderCompletionLimit'"
+										[control]="controls['OrderCompletionLimit']"
+									></form-validation-error>
+								</mat-error>
+							</mat-form-field>
+							<mat-form-field class="flex grow">
+								<mat-label>Per Unit Cost</mat-label>
+								<input type="number" matInput formControlName="UnitCost" />
+								<mat-error>
+									<form-validation-error
+										[name]="'UnitCost'"
+										[control]="controls['UnitCost']"
+									></form-validation-error>
+								</mat-error>
+							</mat-form-field>
+						</div>
+						<div class="flex flex-col">
+							<mat-form-field>
+								<mat-label>Product Description</mat-label>
+								<input matInput formControlName="Description" />
+								<mat-error>
+									<form-validation-error
+										[name]="'Description'"
+										[control]="controls['Description']"
+									></form-validation-error>
+								</mat-error>
+							</mat-form-field>
+						</div>
+					</div>
+				</div>
+				<div class="p-6">
+					<button
+						mat-flat-button
+						class="w-full"
+						color="primary"
+						(click)="upsertProduct()"
+					>
+						Add/Update
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

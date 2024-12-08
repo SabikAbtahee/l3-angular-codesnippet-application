@@ -1,0 +1,34 @@
+<div
+	class="flex flex-col items-center justify-center gap-2 drag-drop-container"
+	[ngClass]="{ active: filesHovering }"
+	(dragover)="onDragOver($event)"
+	(dragleave)="onDragLeave($event)"
+	(drop)="onDrop($event)"
+>
+	<div>
+		<app-icon
+			[iconName]="'upload'"
+			[iconClass]="'text-[36px] gs-grey-300'"
+		></app-icon>
+	</div>
+	<div>{{ label }}</div>
+	<div>
+		<button mat-flat-button color="primary" (click)="fileInput.click()">
+			Choose File
+		</button>
+	</div>
+	<input
+		type="file"
+		multiple
+		(change)="onFileSelect($event)"
+		hidden
+		#fileInput
+	/>
+</div>
+@if (fileUrls.length > 0) {
+	<div class="flex flex-row gap-4 p-4">
+		@for (file of fileUrls; track file) {
+			<img [src]="file" class="image-preview" />
+		}
+	</div>
+}

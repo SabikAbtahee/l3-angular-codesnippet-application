@@ -1,0 +1,9 @@
+<div [ngClass]="currentClass()">
+	<lib-ngx-image-zoom
+		[thumbImage]="imageSrc"
+		[zoomMode]="'hover'"
+		
+		[magnification]="1.5"
+		(imagesLoaded)="imageLoaded($event)"
+	></lib-ngx-image-zoom>
+</div>

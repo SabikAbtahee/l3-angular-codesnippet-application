@@ -1,0 +1,17 @@
+@use "theme";
+.drag-drop-container {
+	border: 2px dashed theme.$gs-grey-300;
+	border-radius: 4px;
+	padding: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+.active {
+	border-color: theme.$gs-green;
+	background-color: theme.$gs-green-100;
+}
+
+.image-preview {
+	height: 120px !important;
+	width: 200px;
+}

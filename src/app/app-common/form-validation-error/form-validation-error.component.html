@@ -1,0 +1,12 @@
+<span *ngIf="control.hasError('required')">{{ name }} is required</span>
+<span *ngIf="control.hasError('email')">Should be a valid email.</span>
+<span *ngIf="control.hasError('min')"
+	>{{ name }} is required {{ control.hasError("min") }}</span
+>
+<span *ngIf="control.hasError('max')">{{ name }} is required</span>
+<span *ngIf="control.hasError('minlength')">{{ name }} is required</span>
+<span *ngIf="control.hasError('maxlength')">{{ name }} is required</span>
+<span *ngIf="control.hasError('pattern')"
+	>{{ name }} must be atleast 8 characters, contain a number and a uppercase
+	letter</span
+>

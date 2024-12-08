@@ -1,0 +1,17 @@
+<div
+	[attr.id]="avatarConfig.Id"
+	[ngClass]="avatarConfig.CssClass"
+	class="rounded-full"
+>
+	@if (avatarConfig.ImageSrc) {
+
+	<img [src]="avatarConfig.ImageSrc" alt="avatar image" />
+
+	} @else {
+
+	<div class="flex flex-col items-center justify-center h-full avatar-border">
+		<span>{{ avatarConfig.Name[0] }}</span>
+	</div>
+
+	}
+</div>

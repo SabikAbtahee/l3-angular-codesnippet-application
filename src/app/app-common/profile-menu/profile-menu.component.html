@@ -1,0 +1,35 @@
+@if (isLoggedIn()) {
+	<app-icon-text
+		[matMenuTriggerFor]="menu"
+		[text]="loggedInUser()?.Name"
+		[iconName]="'account_circle'"
+		[textClass]="'text-lg'"
+		[divClass]="'hover:bg-slate-200 rounded-lg'"
+	></app-icon-text>
+} @else {
+	<app-icon-text
+		(click)="gotoLogin()"
+		[text]="'Login'"
+		[iconName]="'account_circle'"
+		[textClass]="'text-lg'"
+		[divClass]="'hover:bg-slate-200 rounded-lg'"
+	></app-icon-text>
+}
+
+<mat-menu #menu="matMenu">
+	<div class="w-44">
+		<app-icon-text
+			[text]="'My Profile'"
+			[iconName]="'manage_accounts'"
+			[divClass]="'hover:bg-slate-200'"
+			[textClass]="'text-sm'"
+		></app-icon-text>
+		<app-icon-text
+			(click)="logout()"
+			[text]="'Logout'"
+			[iconName]="'logout'"
+			[divClass]="'hover:bg-slate-200'"
+			[textClass]="'text-sm'"
+		></app-icon-text>
+	</div>
+</mat-menu>

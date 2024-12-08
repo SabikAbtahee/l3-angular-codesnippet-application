@@ -1,0 +1,107 @@
+@use "@angular/material" as mat;
+// $portal-font-family: "Sometype Mono Custom";
+$portal-font-family: "VarelaRound-Regular";
+
+@font-face {
+	font-family: $portal-font-family;
+	src: url("../assets/fonts/VarelaRound-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+// }
+
+// @font-face {
+// 	font-family: $portal-font-family;
+// 	src: url("../assets/fonts/SometypeMono-Regular.ttf") format("truetype");
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+// @font-face {
+// 	font-family: $portal-font-family;
+// 	src: url("../assets/fonts/SometypeMono-Bold.ttf") format("truetype");
+// 	font-weight: bold;
+// 	font-style: normal;
+// }
+
+// @font-face {
+// 	font-family: $portal-font-family;
+// 	src: url("../assets/fonts/SometypeMono-BoldItalic.ttf") format("truetype");
+// 	font-weight: bold;
+// 	font-style: italic;
+// }
+
+// @font-face {
+// 	font-family: $portal-font-family;
+// 	src: url("../assets/fonts/SometypeMono-Italic.ttf") format("truetype");
+// 	font-weight: normal;
+// 	font-style: italic;
+// }
+// @font-face {
+// 	font-family: $portal-font-family;
+// 	src: url("../assets/fonts/SometypeMono-Medium.ttf") format("truetype");
+// 	font-weight: 500;
+// 	font-style: normal;
+// }
+
+// @font-face {
+// 	font-family: $portal-font-family;
+// 	src: url("../assets/fonts/SometypeMono-MediumItalic.ttf") format("truetype");
+// 	font-weight: 500;
+// 	font-style: italic;
+// }
+
+// @font-face {
+// 	font-family: $portal-font-family;
+// 	src: url("../assets/fonts/SometypeMono-SemiBold.ttf") format("truetype");
+// 	font-weight: 600;
+// 	font-style: normal;
+// }
+
+// @font-face {
+// 	font-family: $portal-font-family;
+// 	src: url("../assets/fonts/SometypeMono-SemiBoldItalic.ttf") format("truetype");
+// 	font-weight: 600;
+// 	font-style: italic;
+// }
+
+$BulkBuy-typography: mat.m2-define-typography-config(
+	$font-family: $portal-font-family,
+	$headline-1: mat.m2-define-typography-level(96px, 96px, 300),
+	$headline-2: mat.m2-define-typography-level(60px, 60px, 400),
+	$headline-3: mat.m2-define-typography-level(48px, 48px, 400),
+	$headline-4: mat.m2-define-typography-level(34px, 34px, 400),
+	$headline-5: mat.m2-define-typography-level(24px, 24px, 400),
+	$headline-6: mat.m2-define-typography-level(20px, 20px, 500),
+	$subtitle-1: mat.m2-define-typography-level(16px, 16px, 400),
+	$subtitle-2: mat.m2-define-typography-level(14px, 14px, 400),
+	$body-1: mat.m2-define-typography-level(16px, 24px, 500),
+	$body-2: mat.m2-define-typography-level(14px, 14px, 400),
+	$caption: mat.m2-define-typography-level(12px, 14px, 400),
+	$button: mat.m2-define-typography-level(14px, 14px, 500),
+	$overline: mat.m2-define-typography-level(10px, 10px, 300)
+);
+
+@mixin custom-typography($class-name, $typography-level) {
+	.#{$class-name} {
+		@include mat.m2-typography-level($BulkBuy-typography, #{$typography-level});
+	}
+}
+
+$custom-styles: (
+	headline-1: "headline-1",
+	headline-2: "headline-2",
+	headline-3: "headline-3",
+	headline-4: "headline-4",
+	headline-5: "headline-5",
+	headline-6: "headline-6",
+	subtitle-1: "subtitle-1",
+	subtitle-2: "subtitle-2",
+	body-1: "body-1",
+	body-2: "body-2",
+	caption: "caption"
+);
+
+@each $class-name, $typography-level in $custom-styles {
+	@include custom-typography($class-name, $typography-level);
+}

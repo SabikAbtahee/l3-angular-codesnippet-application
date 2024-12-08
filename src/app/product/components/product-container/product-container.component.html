@@ -1,0 +1,24 @@
+<div class="p-6">
+	<div class="flex flex-row items-center gap-4">
+		<mat-form-field class="flex grow">
+			<app-icon matIconPrefix [iconName]="'search'"></app-icon>
+			<input
+				matInput
+				placeholder="Search Product"
+				[formControl]="searchControl"
+			/>
+		</mat-form-field>
+		@if (canCreateProduct()) {
+			<div class="flex flex-row justify-end items-center mb-5">
+				<button mat-raised-button color="primary" (click)="openCreateProduct()">
+					<app-icon-text
+						[iconName]="'add_circle'"
+						[text]="'Add Product'"
+						[textClass]="'text-md'"
+					></app-icon-text>
+				</button>
+			</div>
+		}
+	</div>
+	<product-list></product-list>
+</div>

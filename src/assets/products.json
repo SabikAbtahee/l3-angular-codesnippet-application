@@ -1,0 +1,54 @@
+[
+    {
+        "ItemId": "761b6427-20fb-4a30-a93b-86b532707ab9",
+        "Name": "Chicken Drums",
+        "PurchaseUnitQuantity": 4,
+        "PurchaseUnitValue": "Piece",
+        "OrderCompletionLimit": 40,
+        "Description": "Buy The best chicken With minimum Price",
+        "Images": [
+            "https://picsum.photos/300/200",
+            "https://picsum.photos/300/200"
+        ],
+        "UnitCost": 5.60
+    },
+    {
+        "ItemId": "5022c69c-20ba-49e0-a005-53d470507e4a",
+        "Name": "Beef Steaks",
+        "PurchaseUnitQuantity": 5,
+        "PurchaseUnitValue": "Kg",
+        "OrderCompletionLimit": 100,
+        "Description": "Amazing desi cow meat",
+        "Images": [
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/300/200"
+        ],
+        "UnitCost": 30.99
+    },
+    {
+        "ItemId": "5022c69c-20ba-49e0-a005-53d470507e4a",
+        "Name": "Shrimp",
+        "PurchaseUnitQuantity": 2,
+        "PurchaseUnitValue": "Kg",
+        "OrderCompletionLimit": 30,
+        "Description": "Ocean Shrimps",
+        "Images": [
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/300/200"
+        ],
+        "UnitCost": 10.99
+    },
+    {
+        "ItemId": "5022c69c-20ba-49e0-a005-53d470507e4a",
+        "Name": "Turkey",
+        "PurchaseUnitQuantity": 2,
+        "PurchaseUnitValue": "Piece",
+        "OrderCompletionLimit": 20,
+        "Description": "Turkey Meat",
+        "Images": [
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/300/200"
+        ],
+        "UnitCost": 50.99
+    }
+]

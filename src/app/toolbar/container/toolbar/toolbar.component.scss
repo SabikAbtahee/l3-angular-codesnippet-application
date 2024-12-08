@@ -1,0 +1,9 @@
+@use "variables";
+
+.toolbar {
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	width: calc(100% - variables.$navigation-min-width) !important;
+}
