@@ -2,37 +2,37 @@
 @use "typography";
 @use "@angular/material" as mat;
 
-$BulkBuy-primary: mat.m2-define-palette(mat.$m2-blue-palette);
-$BulkBuy-accent: mat.m2-define-palette(
+$Portal-primary: mat.m2-define-palette(mat.$m2-blue-palette);
+$Portal-accent: mat.m2-define-palette(
 	mat.$m2-yellow-palette,
 	A200,
 	A100,
 	A400
 );
-$BulkBuy-warn: mat.m2-define-palette(mat.$m2-red-palette, 900);
+$Portal-warn: mat.m2-define-palette(mat.$m2-red-palette, 900);
 
-$BulkBuy-light-theme: mat.m2-define-light-theme(
+$Portal-light-theme: mat.m2-define-light-theme(
 	(
 		color: (
-			primary: $BulkBuy-primary,
-			accent: $BulkBuy-accent,
-			warn: $BulkBuy-warn
+			primary: $Portal-primary,
+			accent: $Portal-accent,
+			warn: $Portal-warn
 		),
-		typography: typography.$BulkBuy-typography
+		typography: typography.$Portal-typography
 	)
 );
 
-// $BulkBuy-dark-theme: mat.m2-define-dark-theme(
+// $Portal-dark-theme: mat.m2-define-dark-theme(
 // 	(
 // 		color: (
-// 			primary: $BulkBuy-primary,
-// 			accent: $BulkBuy-accent,
-// 			warn: $BulkBuy-warn
+// 			primary: $Portal-primary,
+// 			accent: $Portal-accent,
+// 			warn: $Portal-warn
 // 		)
 // 	)
 // );
 
-$BulkBuy-dark-theme: mat.define-theme(
+$Portal-dark-theme: mat.define-theme(
 	(
 		color: (
 			theme-type: light,
@@ -41,33 +41,33 @@ $BulkBuy-dark-theme: mat.define-theme(
 	)
 );
 
-@include mat.all-component-typographies($BulkBuy-light-theme);
-@include mat.all-component-themes($BulkBuy-light-theme);
+@include mat.all-component-typographies($Portal-light-theme);
+@include mat.all-component-themes($Portal-light-theme);
 
 @media (prefers-color-scheme: dark) {
 	.dark-scheme,
 	.prefered-scheme {
-		@include mat.all-component-colors($BulkBuy-dark-theme);
+		@include mat.all-component-colors($Portal-dark-theme);
 	}
 }
 
-$primary-50: mat.m2-get-color-from-palette($BulkBuy-primary, 50);
-$primary-300: mat.m2-get-color-from-palette($BulkBuy-primary, 300);
-$primary: mat.m2-get-color-from-palette($BulkBuy-primary, 500);
-$primary-700: mat.m2-get-color-from-palette($BulkBuy-primary, 700);
-$primary-900: mat.m2-get-color-from-palette($BulkBuy-primary, 900);
+$primary-50: mat.m2-get-color-from-palette($Portal-primary, 50);
+$primary-300: mat.m2-get-color-from-palette($Portal-primary, 300);
+$primary: mat.m2-get-color-from-palette($Portal-primary, 500);
+$primary-700: mat.m2-get-color-from-palette($Portal-primary, 700);
+$primary-900: mat.m2-get-color-from-palette($Portal-primary, 900);
 
-$accent-50: mat.m2-get-color-from-palette($BulkBuy-accent, 50);
-$accent-300: mat.m2-get-color-from-palette($BulkBuy-accent, 300);
-$accent: mat.m2-get-color-from-palette($BulkBuy-accent, 500-contrast);
-$accent-700: mat.m2-get-color-from-palette($BulkBuy-accent, 700);
-$accent-900: mat.m2-get-color-from-palette($BulkBuy-accent, 900);
+$accent-50: mat.m2-get-color-from-palette($Portal-accent, 50);
+$accent-300: mat.m2-get-color-from-palette($Portal-accent, 300);
+$accent: mat.m2-get-color-from-palette($Portal-accent, 500-contrast);
+$accent-700: mat.m2-get-color-from-palette($Portal-accent, 700);
+$accent-900: mat.m2-get-color-from-palette($Portal-accent, 900);
 
-$warn-50: mat.m2-get-color-from-palette($BulkBuy-warn, 50);
-$warn-300: mat.m2-get-color-from-palette($BulkBuy-warn, 300);
-$warn: mat.m2-get-color-from-palette($BulkBuy-warn, 500);
-$warn-700: mat.m2-get-color-from-palette($BulkBuy-warn, 700);
-$warn-900: mat.m2-get-color-from-palette($BulkBuy-warn, 900);
+$warn-50: mat.m2-get-color-from-palette($Portal-warn, 50);
+$warn-300: mat.m2-get-color-from-palette($Portal-warn, 300);
+$warn: mat.m2-get-color-from-palette($Portal-warn, 500);
+$warn-700: mat.m2-get-color-from-palette($Portal-warn, 700);
+$warn-900: mat.m2-get-color-from-palette($Portal-warn, 900);
 
 $gs-black: #333333;
 $gs-white: #ffffff;
@@ -172,6 +172,6 @@ $all-colours: (
 }
 
 .primary-bg {
-	background-color: mat.m2-get-color-from-palette($BulkBuy-primary, 500);
+	background-color: mat.m2-get-color-from-palette($Portal-primary, 500);
 	color: $gs-white;
 }

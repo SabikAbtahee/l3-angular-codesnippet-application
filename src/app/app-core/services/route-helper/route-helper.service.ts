@@ -12,7 +12,7 @@ export class RouteHelperService {
 		this.router.navigate([`/${RoutePath.Authentication}`]);
 	}
 
-	redirectToProduct() {
-		this.router.navigate([`/${RoutePath.Product}`]);
+	redirectToHome() {
+		this.router.navigate([`/${RoutePath.Home}`]);
 	}
 }

@@ -2,7 +2,7 @@ import { Injectable, Signal, signal } from "@angular/core";
 import { JwtHelperService } from "@auth0/angular-jwt";
 import { AccessTokenCookieKey, RouteHelperService } from "@core";
 import { CookieService } from "ngx-cookie-service";
-import { BulkBuyToken, IAuth, ILoggedInUser } from "./IAuth.interface";
+import { IToken, IAuth, ILoggedInUser } from "./IAuth.interface";
 import { Roles } from "../../enums/roles.enum";
 
 @Injectable({
@@ -21,7 +21,7 @@ export class AuthService implements IAuth {
 		}
 		return this._LoggedInUser;
 	}
-	private set LoggedInUser(value: BulkBuyToken | null) {
+	private set LoggedInUser(value: IToken | null) {
 		if (value) {
 			this._LoggedInUser.set({
 				Email: value.email,
@@ -63,10 +63,10 @@ export class AuthService implements IAuth {
 	logOut(): void {
 		this.LoggedInUser = null;
 		this._cookieService.delete(AccessTokenCookieKey);
-		this._routeHelperService.redirectToProduct();
+		this._routeHelperService.redirectToHome();
 	}
 
-	private _getTokenValue(): BulkBuyToken | null {
+	private _getTokenValue(): IToken | null {
 		const jwtService = new JwtHelperService();
 		const token = this._cookieService.get(AccessTokenCookieKey);
 		return jwtService.decodeToken(token);

@@ -22,7 +22,7 @@ export class AuthenticationService {
 	}
 
 	gotoHome() {
-		this.router.navigate([`/${RoutePath.Product}`]);
+		this.router.navigate([`/${RoutePath.Home}`]);
 	}
 	signin(payload: ISignInDto): Observable<IAuthResponse> {
 		return this._httpClient

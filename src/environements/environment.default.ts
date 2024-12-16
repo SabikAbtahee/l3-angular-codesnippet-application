@@ -1,5 +1,5 @@
 export const environmentDefault = {
-	portalName: "Bulk Buy",
+	portalName: "Code Snippets",
 	defaultLanguageCode: "us",
 	languageList: [
 		{

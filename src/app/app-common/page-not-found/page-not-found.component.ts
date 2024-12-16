@@ -17,6 +17,6 @@ export class PageNotFoundComponent {
 	 */
 	constructor(private _routeHelperService: RouteHelperService) {}
 	redirectToHome() {
-		this._routeHelperService.redirectToProduct();
+		this._routeHelperService.redirectToHome();
 	}
 }

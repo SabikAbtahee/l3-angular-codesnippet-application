@@ -11,7 +11,7 @@ export interface IAuth {
 	// isAuthorized
 }
 
-export interface BulkBuyToken {
+export interface IToken {
 	sub: string;
 	name: string;
 	email: string;
